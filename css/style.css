@@ -19,7 +19,7 @@ header {
   z-index: 100;
   top: 0;
   left: 0;
-  //background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .header__inner {
@@ -64,6 +64,7 @@ header {
 
 /* -------------------------------- main --------------------------------------- */
 .main__image {
+  /* headerの高さ分下げる */
   margin-top: 100px;
   /*背景画像は高さを持たないため、heightの指定が必要*/
   height: 800px;
@@ -85,7 +86,6 @@ header {
   transform: translate(-50%, -50%);
   font-size: 30px;
   font-weight: bold;
-
   color: #fff;
   text-shadow: 0 0 10px #000;
 }
@@ -99,17 +99,28 @@ header {
 .main__image__horizontal {
 }
 
-/* -------------------------------- test --------------------------------------- */
-
-.wrap {
-  -moz-column-count: 3;
-  column-count: 2;
+.main__bottom {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
-.item {
-  -moz-column-break-inside: avoid;
-  break-inside: avoid;
-  margin-bottom: 30px;
+.main__button {
+  margin-top: 100px;
+  width: 200px;
+  height: 50px;
+  background-color: #0b6263;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.main__button:hover {
+  opacity: 0.8;
 }
 
 /* -------------------------------- footer --------------------------------------- */
