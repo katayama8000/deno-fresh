@@ -1,9 +1,14 @@
 body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
   background-color: #f8f6f2;
+  line-height: 1.71;
   color: #0b6263;
 }
+
 .inner {
-  max-width: 70%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* --------------------------------- header ------------------------------------ */
@@ -12,10 +17,10 @@ header {
   background-color: #fff;
   font-weight: bold;
   height: 100px;
-  //line-height: 100px;
+  /* line-height: 100px; */
   position: fixed;
   width: 100%;
-  //box-shadow: 0 3px 3px;
+  /* box-shadow: 0 3px 3px; */
   z-index: 100;
   top: 0;
   left: 0;
@@ -37,7 +42,7 @@ header {
   display: flex;
   align-items: center;
   margin-left: auto;
-  //line-height: 100px;
+  /* line-height: 100px; */
   padding-left: 20px;
 }
 
@@ -63,12 +68,9 @@ header {
 }
 
 /* -------------------------------- main --------------------------------------- */
-.main__image {
-  /* headerの高さ分下げる */
+/* .main__image {
   margin-top: 100px;
-  /*背景画像は高さを持たないため、heightの指定が必要*/
   height: 800px;
-  /*相対パスで画像ファイルを指定*/
   background-image: url(../img/house1.jpeg);
   background-position: center;
   background-size: cover;
@@ -77,26 +79,89 @@ header {
   border-radius: 0px 999px 999px 0px;
   margin-right: 200px;
   position: relative;
+} */
+
+/* -------- test ------------ */
+
+.main-img {
+  max-width: 90%;
+  margin-top: 100px;
+  height: auto;
+  border-radius: 0 300px 300px 0;
+  margin-right: 115px;
+  position: relative;
 }
 
 .main__image__text {
   position: absolute;
-  top: 30%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
+  top: 60%;
+  left: 70px;
+  /* transform: translate(-70%, -50%); */
+  font-size: 60px;
   font-weight: bold;
   color: #fff;
-  text-shadow: 0 0 10px #000;
 }
 
 .main__image__vertical {
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
+  margin-left: -20px;
+  letter-spacing: 0.15em;
 }
 
 .main__image__horizontal {
+  padding-left: 0px;
+  letter-spacing: 0.15em;
+}
+
+.main-title {
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 39px;
+  padding-bottom: 48px;
+}
+
+.card-img {
+  width: 561px;
+  height: 391px;
+  border-radius: 50px;
+}
+.card {
+  display: grid;
+  width: 1206px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px;
+}
+
+#card-itemA {
+  grid-row: 1 /7;
+  grid-column: 1 / 2;
+}
+
+#text-itemA {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+#card-itemB {
+  grid-row: 3 / 5;
+  grid-column: 2 / 3;
+}
+
+#text-itemB {
+  grid-row: 5 / 6;
+  grid-column: 2 / 3;
+}
+
+#card-itemC {
+  grid-row: 4 / 7;
+  grid-column: 1 / 2;
+}
+
+#text-itemC {
+  grid-row: 7/ 8;
+  grid-column: 1 / 2;
 }
 
 .main__bottom {
