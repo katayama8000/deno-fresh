@@ -102,6 +102,12 @@ header {
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .main__image__text {
+    color: red;
+  }
+}
+
 .main__image__vertical {
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
