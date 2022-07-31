@@ -67,6 +67,21 @@ header {
   border-radius: 10px;
   padding: 15px 20px;
   font-size: 10px;
+  display: flex;
+}
+
+.mail__box__left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.icon__size {
+  font-size: 3em; /*1.5倍にする*/
+}
+
+.mail__box__right {
 }
 
 /* -------------------------------- main --------------------------------------- */
