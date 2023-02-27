@@ -1,4 +1,11 @@
-## css-design-house 
+# fresh project
 
-### font-awesomeの大きさ変更方法
-https://qiita.com/mzmz__02/items/aaff1d615900cf7d346c
+### Usage
+
+Start the project:
+
+```
+deno task start
+```
+
+This will watch the project directory and restart as necessary.
