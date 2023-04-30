@@ -4,7 +4,14 @@ import puppeteer from 'https://deno.land/x/puppeteer@16.2.0/mod.ts';
 export const handler = async (_req: Request, _ctx: HandlerContext) => {
   console.log('puppeteer');
   try {
-    const browser = await puppeteer.launch();
+    await Deno.permissions.request({ name: 'read', path: '<your file path>' });
+    await Deno.permissions.request({ name: 'write', path: '<your file path>' });
+    await Deno.permissions.request({ name: 'env' });
+    await Deno.permissions.request({ name: 'run' });
+
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
     await page.goto('https://example.com');
     // await page.screenshot({ path: 'example.png' });
