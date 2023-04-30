@@ -7,7 +7,7 @@ export const handler = async (_req: Request, _ctx: HandlerContext) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://example.com');
-    await page.screenshot({ path: 'example.png' });
+    // await page.screenshot({ path: 'example.png' });
 
     await browser.close();
     return new Response('success');
